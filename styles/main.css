@@ -1,0 +1,536 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Julius+Sans+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  border: 0;
+  outline: none;
+  background-color: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.hidden {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.section-text {
+  text-align: center;
+  margin-bottom: 90px;
+}
+.section-text .section-title {
+  position: relative;
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 2.5rem;
+  color: #111;
+  letter-spacing: 3px;
+}
+.section-text .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  right: calc(50% - 30px);
+  width: 30px;
+  height: 5px;
+  background: #FACF0F;
+  border-radius: 3px;
+}
+.section-text .section-subtitle {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.15rem;
+  color: #333;
+  margin-top: 35px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  border-bottom: 1px solid #333;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.nav .logo h1 {
+  font-size: 1.5rem;
+  font-family: "Archivo Narrow", sans-serif;
+}
+.nav .logo h1:hover {
+  cursor: pointer;
+}
+.nav .nav-list {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav .nav-list .nav-list_link {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.25rem;
+}
+.nav .nav-list .nav-list_link:hover {
+  color: #FACF0F;
+  transition: 0.15s ease-out;
+}
+@media screen and (max-width: 700px) {
+  .nav .nav-list {
+    display: none;
+  }
+}
+.nav .menu-bar {
+  display: none;
+  font-size: 1.5rem;
+}
+.nav .menu-bar:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  .nav .menu-bar {
+    display: block;
+  }
+}
+.nav .nav-menu.small-screen {
+  display: none;
+  padding: 2rem;
+  transition: 0.6s ease-out;
+}
+.nav .nav-menu.small-screen .menu-close {
+  align-self: flex-start;
+  font-size: 1.5rem;
+}
+.nav .nav-menu.small-screen .menu-close:hover {
+  cursor: pointer;
+}
+.nav .nav-menu.small-screen .nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  margin-top: 10rem;
+}
+@media screen and (max-width: 700px) {
+  .nav .nav-menu.small-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ccc;
+  }
+}
+
+.main .hero {
+  background-image: url("../img/plant.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main .hero .container {
+  padding: 200px 0 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .hero .container .hero-text {
+  text-align: center;
+  max-width: 50vw;
+}
+.main .hero .container .hero-text .hero-title {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+@media screen and (max-width: 460px) {
+  .main .hero .container .hero-text .hero-title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main .hero .container .hero-text .hero-title {
+    font-size: 2rem;
+  }
+}
+.main .hero .container .hero-text .hero-subtitle {
+  margin-top: 30px;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 460px) {
+  .main .hero .container .hero-text .hero-subtitle {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main .hero .container .hero-text .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 460px) {
+  .main .hero .container .hero-text {
+    max-width: 90vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main .hero .container .hero-text {
+    max-width: 80vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .main .hero .container .hero-text {
+    max-width: 70vw;
+  }
+}
+.main .hero .container .hero-btn {
+  margin-top: 50px;
+  transition: 0.15s ease-in-out;
+}
+.main .hero .container .hero-btn a {
+  color: #111;
+  background-color: #FACF0F;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: 5px 3px 15px 1px rgba(0, 0, 0, 0.15);
+  padding: 15px 90px;
+  cursor: pointer;
+}
+.main .hero .container .hero-btn:hover {
+  transform: translateY(-5px);
+}
+.main .about {
+  padding: 120px 0;
+  border-top: 1px solid #000;
+  background-color: #fafafa;
+}
+.main .about .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .about .container .about_content {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 900px) {
+  .main .about .container .about_content {
+    flex-direction: column;
+    gap: 100px;
+  }
+}
+.main .about .container .about_content .about_content-title {
+  text-align: left;
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.main .about .container .about_content .about_content-main {
+  flex: 1;
+}
+.main .about .container .about_content .about_content-main .about_content-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 900px) {
+  .main .about .container .about_content .about_content-main .about_content-details {
+    margin-right: 30vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .about .container .about_content .about_content-main .about_content-details {
+    margin-right: 0;
+  }
+}
+.main .about .container .about_content .about_content-main .about_content-details p {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1rem;
+}
+.main .about .container .about_content .about_content-main .about-btn {
+  transition: 0.15s ease-in-out;
+}
+.main .about .container .about_content .about_content-main .about-btn:hover {
+  transform: translateY(-5px);
+}
+.main .about .container .about_content .about_content-main .about-btn a {
+  color: #111;
+  background-color: #FACF0F;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: 5px 3px 15px 1px rgba(0, 0, 0, 0.15);
+  padding: 15px 50px;
+  cursor: pointer;
+}
+.main .about .container .about_content .about_content-skills {
+  flex: 1;
+}
+.main .about .container .about_content .about_content-skills .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.main .about .container .about_content .about_content-skills .skills .skills_skill {
+  padding: 10px 20px;
+  background-color: rgba(153, 153, 153, 0.2);
+  color: #333;
+  font-family: "Julius Sans One", sans-serif;
+}
+.main .projects .container {
+  padding: 120px 30px;
+}
+@media screen and (max-width: 600px) {
+  .main .projects .container {
+    padding: 120px 15px;
+  }
+}
+.main .projects .container .projects_content {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+}
+.main .projects .container .projects_content .projects_row {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+@media screen and (max-width: 900px) {
+  .main .projects .container .projects_content .projects_row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.main .projects .container .projects_content .projects_row .projects_row-img {
+  flex: 1.5;
+}
+.main .projects .container .projects_content .projects_row .projects_row-img img {
+  width: 100%;
+}
+.main .projects .container .projects_content .projects_row .projects_row-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.main .projects .container .projects_content .projects_row .projects_row-content .projects_row-content_title {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 1.75rem;
+  color: #111;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+  .main .projects .container .projects_content .projects_row .projects_row-content .projects_row-content_title {
+    font-size: 1.5rem;
+  }
+}
+.main .projects .container .projects_content .projects_row .projects_row-content .projects_row-content_description {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 600px) {
+  .main .projects .container .projects_content .projects_row .projects_row-content .projects_row-content_description {
+    font-size: 0.75em;
+    line-height: 1rem;
+  }
+}
+.main .projects .container .projects_content .projects_row .projects_row-content .projects_row-btn a {
+  color: #111;
+  background-color: #FACF0F;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: 5px 3px 15px 1px rgba(0, 0, 0, 0.15);
+  padding: 15px 50px;
+  cursor: pointer;
+}
+.main .contact {
+  background-image: url("../img/pen.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main .contact .container {
+  padding: 120px 30px;
+}
+@media screen and (max-width: 600px) {
+  .main .contact .container {
+    padding: 120px 15px;
+  }
+}
+.main .contact .container .contact_form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 95%;
+  max-width: 40rem;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.2);
+  margin: 5rem auto 0 auto;
+  padding: 1.5rem;
+}
+.main .contact .container .contact_form-container .contact_form {
+  text-align: right;
+}
+.main .contact .container .contact_form-container .contact_form .contact_form-field {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.main .contact .container .contact_form-container .contact_form .contact_form-field .contact_form-label {
+  font-family: "Archivo Narrow", sans-serif;
+  letter-spacing: 1px;
+}
+.main .contact .container .contact_form-container .contact_form .contact_form-field .contact_form-input {
+  width: 100%;
+  background-color: #fafafa;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.main .contact .container .contact_form-container .contact_form .contact_form-field .contact_form-input:focus {
+  outline: none;
+}
+.main .contact .container .contact_form-container .contact_form .contact_btn {
+  color: #111;
+  background-color: #FACF0F;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  box-shadow: 5px 3px 15px 1px rgba(0, 0, 0, 0.15);
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .main .contact .container .contact_form-container .contact_form .contact_btn {
+    width: 100%;
+  }
+}
+
+.footer {
+  background-color: #000;
+}
+.footer .container {
+  padding: 0 30px;
+}
+.footer .container .footer_upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 0;
+}
+@media screen and (max-width: 800px) {
+  .footer .container .footer_upper {
+    flex-direction: column;
+  }
+}
+.footer .container .footer_upper .footer_upper-text {
+  text-align: left;
+}
+@media screen and (max-width: 800px) {
+  .footer .container .footer_upper .footer_upper-text {
+    order: 2;
+  }
+}
+.footer .container .footer_upper .footer_upper-text .footer_upper-text_title {
+  font-family: "Archivo Narrow", sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer .container .footer_upper .footer_upper-text .footer_upper-text_subtitle {
+  font-family: "Julius Sans One", sans-serif;
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+.footer .container .footer_upper .footer_upper-social {
+  text-align: left;
+}
+@media screen and (max-width: 800px) {
+  .footer .container .footer_upper .footer_upper-social {
+    order: 1;
+    margin-bottom: 50px;
+  }
+}
+.footer .container .footer_upper .footer_upper-social .footer_upper-social_title {
+  font-family: "Archivo Narrow", sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer .container .footer_upper .footer_upper-social .footer_upper-social_links .social-link {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-right: 10px;
+}
+.footer .container .footer_lower {
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+.footer .container .footer_lower .footer_lower-copyright {
+  font-size: 0.75rem;
+  font-family: "Julius Sans One", sans-serif;
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */
