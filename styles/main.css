@@ -31,7 +31,6 @@ button:focus {
 
 .hidden {
   transform: translateX(100%);
-  opacity: 0;
 }
 
 .container {
@@ -55,19 +54,39 @@ button:focus {
   content: "";
   position: absolute;
   bottom: -15px;
-  right: calc(50% - 30px);
+  right: calc(50% - 15px);
   width: 30px;
   height: 5px;
   background: #FACF0F;
   border-radius: 3px;
 }
+@media screen and (max-width: 900px) {
+  .section-text .section-title {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-text .section-title {
+    font-size: 2rem;
+  }
+}
 .section-text .section-subtitle {
   font-family: "Julius Sans One", sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   color: #333;
   margin-top: 35px;
   max-width: 600px;
   margin-inline: auto;
+}
+@media screen and (max-width: 900px) {
+  .section-text .section-subtitle {
+    font-size: 1.15rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-text .section-subtitle {
+    font-size: 1rem;
+  }
 }
 
 body {
@@ -76,7 +95,7 @@ body {
 
 header {
   position: relative;
-  border-bottom: 1px solid #333;
+  box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.2);
 }
 
 .nav {
@@ -135,7 +154,7 @@ header {
   height: 100vh;
   width: 100vw;
   padding: 2rem;
-  background-color: #ccc;
+  background-color: #fff;
   transition: 0.6s ease-out;
   z-index: 111;
 }
@@ -161,7 +180,7 @@ header {
 }
 
 .main .hero {
-  background-image: url("../img/plant.jpg");
+  background-image: url("../img/bg.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -179,33 +198,33 @@ header {
 }
 .main .hero .container .hero-text .hero-title {
   font-family: "Archivo Narrow", sans-serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: 3px;
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 900px) {
   .main .hero .container .hero-text .hero-title {
-    font-size: 1.5rem;
+    font-size: 3rem;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .main .hero .container .hero-text .hero-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 .main .hero .container .hero-text .hero-subtitle {
   margin-top: 30px;
   font-family: "Julius Sans One", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 900px) {
   .main .hero .container .hero-text .hero-subtitle {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .main .hero .container .hero-text .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
 @media screen and (max-width: 460px) {
@@ -243,7 +262,6 @@ header {
 }
 .main .about {
   padding: 120px 0;
-  border-top: 1px solid #000;
   background-color: #fafafa;
 }
 .main .about .container {
@@ -270,6 +288,16 @@ header {
   letter-spacing: 1px;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 900px) {
+  .main .about .container .about_content .about_content-title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .about .container .about_content .about_content-title {
+    font-size: 1.25rem;
+  }
+}
 .main .about .container .about_content .about_content-main {
   flex: 1;
 }
@@ -291,7 +319,12 @@ header {
 }
 .main .about .container .about_content .about_content-main .about_content-details p {
   font-family: "Julius Sans One", sans-serif;
-  font-size: 1rem;
+  font-size: 1.15rem;
+}
+@media screen and (max-width: 900px) {
+  .main .about .container .about_content .about_content-main .about_content-details p {
+    font-size: 1rem;
+  }
 }
 .main .about .container .about_content .about_content-main .about-btn {
   transition: 0.15s ease-in-out;
@@ -367,9 +400,14 @@ header {
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .main .projects .container .projects_content .projects_row .projects_row-content .projects_row-content_title {
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .projects .container .projects_content .projects_row .projects_row-content .projects_row-content_title {
+    font-size: 1.25rem;
   }
 }
 .main .projects .container .projects_content .projects_row .projects_row-content .projects_row-content_description {
@@ -381,7 +419,7 @@ header {
 }
 @media screen and (max-width: 600px) {
   .main .projects .container .projects_content .projects_row .projects_row-content .projects_row-content_description {
-    font-size: 0.75em;
+    font-size: 1rem;
     line-height: 1rem;
   }
 }
@@ -397,7 +435,7 @@ header {
   cursor: pointer;
 }
 .main .contact {
-  background-image: url("../img/pen.jpg");
+  background-image: url("../img/bg.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
