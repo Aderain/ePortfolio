@@ -94,8 +94,12 @@ body {
 }
 
 header {
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fff;
   box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.2);
+  z-index: 11;
 }
 
 .nav {
@@ -109,9 +113,11 @@ header {
 .nav .logo h1 {
   font-size: 1.5rem;
   font-family: "Archivo Narrow", sans-serif;
+  transition: 0.3s ease-out;
 }
 .nav .logo h1:hover {
   cursor: pointer;
+  color: #FACF0F;
 }
 .nav .nav-list {
   display: flex;
@@ -184,6 +190,7 @@ header {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 100px;
 }
 .main .hero .container {
   padding: 200px 0 300px;
