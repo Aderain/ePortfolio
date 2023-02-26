@@ -3,6 +3,10 @@
 @import "vars";
 @import "util";
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -44,11 +48,29 @@ header {
     .nav-list_link {
       font-family: $ff-secondary;
       font-size: 1.25rem;
+      position: relative;
 
-      &:hover {
-        color: $color-accent;
-        transition: 0.15s ease-out;
+      padding: 1rem 0;
+
+      &::after{
+        content: "";
+        height: 3px;
+        width: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $color-accent;
+        transition: 0.3s ease-out;
       }
+
+      &:hover::after{
+        width: 100%;
+      }
+
+      // &:hover {
+      //   color: $color-accent;
+      //   transition: 0.15s ease-out;
+      // }
     }
 
     @media screen and (max-width: 700px) {
