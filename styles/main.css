@@ -137,20 +137,11 @@ header {
   position: relative;
   padding: 1rem 0;
 }
-.nav .nav-list .nav-list_link::after {
-  content: "";
-  height: 3px;
-  width: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #FACF0F;
-  transition: 0.3s ease-out;
+.nav .nav-list .nav-list_link:hover {
+  color: #FACF0F;
+  transition: 0.15s ease-out;
 }
-.nav .nav-list .nav-list_link:hover::after {
-  width: 100%;
-}
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .nav .nav-list {
     display: none;
   }
@@ -162,7 +153,7 @@ header {
 .nav .menu-bar:hover {
   cursor: pointer;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .nav .menu-bar {
     display: block;
   }
@@ -198,7 +189,7 @@ header {
   gap: 3rem;
   margin-top: 10rem;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .nav .nav-menu.small-screen {
     display: flex;
   }
@@ -383,6 +374,140 @@ header {
   color: #333;
   font-family: "Julius Sans One", sans-serif;
 }
+.main .education {
+  padding: 120px 0;
+}
+.main .education .container .education_content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media screen and (max-width: 600px) {
+  .main .education .container .education_content {
+    flex-direction: column;
+  }
+}
+.main .education .container .education_content .education_content-item {
+  position: relative;
+  border-bottom: 1px solid #000;
+  flex: 1;
+}
+.main .education .container .education_content .education_content-item::after {
+  content: "";
+  position: absolute;
+  right: -22.5px;
+  bottom: -7.5px;
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #FACF0F;
+}
+.main .education .container .education_content .education_content-item:last-child::after {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .main .education .container .education_content .education_content-item::after {
+    right: calc(50% - 7.5px);
+  }
+  .main .education .container .education_content .education_content-item:last-child::after {
+    display: initial;
+  }
+}
+.main .education .container .education_content .education_content-item .education_year {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 2.25rem;
+  color: #111;
+  text-align: center;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 900px) {
+  .main .education .container .education_content .education_content-item .education_year {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .education .container .education_content .education_content-item .education_year {
+    font-size: 1.75rem;
+  }
+}
+.main .education .container .education_content .education_content-item .education_place {
+  font-family: "Julius Sans One", sans-serif;
+  text-align: justify;
+  margin-bottom: 30px;
+  font-size: 1.15rem;
+}
+@media screen and (max-width: 900px) {
+  .main .education .container .education_content .education_content-item .education_place {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .education .container .education_content .education_content-item .education_place {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+.main .education .container .education_courses {
+  margin-top: 100px;
+  text-align: center;
+}
+.main .education .container .education_courses .education_courses-title {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 900px) {
+  .main .education .container .education_courses .education_courses-title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main .education .container .education_courses .education_courses-title {
+    font-size: 1.25rem;
+  }
+}
+.main .education .container .education_courses .education_courses-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+.main .education .container .education_courses .education_courses-content_item {
+  font-family: "Julius Sans One", sans-serif;
+}
+.main .education .container .education_courses .education_courses-content_item span {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 1rem;
+}
+.main .education .container .education_courses .education_courses-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+.main .education .container .education_courses .education_courses-icons svg, .main .education .container .education_courses .education_courses-icons img {
+  max-width: 5rem;
+  border-radius: 6px;
+}
+.main .gallery {
+  padding: 120px 0;
+  background-color: rgba(153, 153, 153, 0.2);
+}
+.main .gallery .container .swiper {
+  max-width: 900px;
+  max-height: 900px;
+}
+.main .gallery .container .swiper .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
 .main .projects .container {
   padding: 120px 30px;
 }
@@ -412,6 +537,8 @@ header {
 }
 .main .projects .container .projects_content .projects_row .projects_row-img img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main .projects .container .projects_content .projects_row .projects_row-content {
   display: flex;
