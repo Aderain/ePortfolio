@@ -66,3 +66,8 @@ const swiper = new Swiper('.swiper', {
     //   el: '.swiper-scrollbar',
     // },
   });
+
+
+  import db from "./db.json";
+
+  

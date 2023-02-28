@@ -1,0 +1,25 @@
+{
+    "Projects" : [
+        {
+            "name": "KZ-Travel",
+            "description": "",
+            "tools": "HTML, CSS, JavaScript, ReactJS, API, Google Maps, SASS, npm"
+        },
+        {
+            "name": "To-Do List",
+            "description": "",
+            "tools": "HTML, CSS, JavaScript, ReactJS, API, Google Maps, SASS, npm"
+        },
+        {
+            "name": "Pomodoro Timer",
+            "description": "",
+            "tools": "HTML, CSS, JavaScript, ReactJS, API, Google Maps, SASS, npm"
+        },
+        {
+            "name": "Gericht",
+            "description": "",
+            "tools": "HTML, CSS, JavaScript, ReactJS, API, Google Maps, SASS, npm"
+        }
+    ]
+
+}
